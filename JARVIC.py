@@ -132,9 +132,12 @@ if __name__ == "__main__":
             pwd = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567!@#$%^&*(')"
             res = ''.join(random.choices(pwd,k=7))
             speak(res)
+            pywhatkit.sendwhatmsg_instantly("+8801304658602", res, 15)
+            
+
 
          elif "send message" in query:  
-            pywhatkit.sendwhatmsg("+8801304658602", "hello boss test msg",10,47)
+            pywhatkit.sendwhatmsg("+8801304658602", "hello boss test msg",12,1)
 
          elif "play a song on youtube" in query:
             pywhatkit.playonyt("see you again")
