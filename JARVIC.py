@@ -128,6 +128,11 @@ if __name__ == "__main__":
             cm = takecommand().lower()
             webbrowser.open(f"{cm}")
 
+         elif "password" in query:
+            pwd = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567!@#$%^&*(')"
+            res = ''.join(random.choices(pwd,k=7))
+            speak(res)
+
          elif "send message" in query:  
             pywhatkit.sendwhatmsg("+8801304658602", "hello boss test msg",10,47)
 
@@ -153,19 +158,4 @@ if __name__ == "__main__":
          elif "no thanks" in query:
             speak("thanks for using me sir, have a good day.")
             sys.exit()
-
-        speak("anythinks else sir?")
-          
-
-
-
-
-
-
-
-
-
-
-
-
 
